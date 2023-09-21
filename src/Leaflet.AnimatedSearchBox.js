@@ -64,7 +64,7 @@
 
         addItem: function (item) {
             var listItem = L.DomUtil.create('li', 'leaflet-searchbox-autocomplete-item', this._autocomplete);
-            listItem.textContent = item;
+            listItem.innerHTML = item;
             this._items.push(listItem);
 
             L.DomUtil.addClass(this._searchboxWrapper, 'open');
