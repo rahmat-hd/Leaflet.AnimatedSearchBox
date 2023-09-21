@@ -192,7 +192,7 @@
             this.setValue(item.innerHTML);
             const value = this.getValue();
             const thisItems = this._items;
-            const index = thisItems.value.findIndex((i) => i.nomor === value);
+            const index = thisItems.findIndex((i) => i.nomor === value);
             map.setView([thisItems[index].latitude, thisItems[index].longitude], 5);
             this._input.focus();
         },
