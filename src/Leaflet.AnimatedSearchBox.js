@@ -193,6 +193,7 @@
             const value = this.getValue();
             const thisItems = this._items;
             const index = thisItems.findIndex((i) => i.nomor === value);
+            console.log(item)
             console.log(thisItems);
             console.log(index);
             console.log(thisItems[index])
