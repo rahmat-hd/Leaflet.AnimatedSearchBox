@@ -41,7 +41,7 @@
             // Autocomplete behaviour
             if (this.options.autocompleteFeatures.includes('setValueOnClick')) {
                 this.onAutocomplete('click', function (e) {
-                    this._onListItemClick(map, e.target);
+                    this._onListItemClick(e.target);
                 });
             }
 
@@ -188,16 +188,8 @@
             }
         },
 
-        _onListItemClick: function (map, item) {
+        _onListItemClick: function (item) {
             this.setValue(item.innerHTML);
-            const value = this.getValue();
-            const thisItems = this._items;
-            const index = thisItems.findIndex((i) => i.nomor === value);
-            console.log(item)
-            console.log(thisItems);
-            console.log(index);
-            console.log(thisItems[index])
-            map.setView([thisItems[index].latitude, thisItems[index].longitude], 5);
             this._input.focus();
         },
 
