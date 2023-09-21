@@ -189,11 +189,11 @@
         },
 
         _onListItemClick: function (map, item) {
-            var p = _items.fin
             this.setValue(item.innerHTML);
             const value = this.getValue();
-            const index = _items.value.findIndex((i) => i.nomor === value);
-            map.setView([_items[index].latitude, _items[index].longitude], 5);
+            const thisItems = this._items;
+            const index = thisItems.value.findIndex((i) => i.nomor === value);
+            map.setView([thisItems[index].latitude, thisItems[index].longitude], 5);
             this._input.focus();
         },
 
